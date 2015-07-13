@@ -79,11 +79,21 @@ console.log(backPack);
 //Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
   //Code Here
-
+var me = {
+	name: 'Rafael',
+	age: '27',
+	height: "6'4",
+	gender: 'male',
+	married: 'single',
+	eyeColor: 'brown',
+	hairColor: 'black'
+}
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
   //Code Here
-
+for (var key in me) {
+	alert(me[key]);
+}
 
 
 
@@ -95,11 +105,19 @@ console.log(backPack);
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
   //Code Here
-
+var album = {
+	ghostsong: 5,
+	firewalking: 3,
+	nocturna: 4,
+	delivered: 4,
+	rapaces: 6
+}
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
-
+for (var song in album){
+	alert(song);
+}
 
 
 
@@ -111,11 +129,20 @@ console.log(backPack);
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
   //Code Here
-
+var states = {
+	NY: 100000,
+	PA: 500000,
+	NC: 2500,
+	SC: 3000
+}
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
   //Code Here
-
+for (var res in states) {
+	if (states[res] > 30000){
+		alert(res)
+	}
+}
 
 
 
@@ -136,7 +163,11 @@ var user = {
 that each value is truthy. If it's not truthy, remove it from the object. */
 
   //Code Here
-
+for (var key in user) {
+	if (user[key] !=== true) {
+		delete user.key;
+	}
+}
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
   //Code Here
