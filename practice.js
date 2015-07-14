@@ -165,7 +165,7 @@ that each value is truthy. If it's not truthy, remove it from the object. */
   //Code Here
 for (var key in user) {
 	if (user[key] !=== true) {
-		delete user.key;
+		delete user[key];
 	}
 }
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
