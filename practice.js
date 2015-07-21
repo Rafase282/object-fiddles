@@ -260,7 +260,25 @@ MakePerson = function (name,birthday,ssn) {
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
-  
+MakeCard = function (bank,cardNumber,name, expDate, type, code){
+	this.bank = bank;
+	this.cardNumber = cardNumber;
+	this.name = name;
+	this.expDate = expDate;
+	this.type = type;
+	this.code = code;
+	
+	var creditcard = {
+		bank: this.bank,
+		cardNumber: this.cardNumber,
+		name: this.name,
+		expDate: this.expDate,
+		type: this.type,
+		code: this.code
+	}
+	
+	return creditcard;
+}  
   
   
 //NEXT PROBLEM
@@ -274,4 +292,13 @@ MakePerson = function (name,birthday,ssn) {
 
   //Code Here
 
-
+bindCard = function(person,creditcard) {
+	this.person = person;
+	this.creditcard = credicard;
+	
+	var personcreditcard = {
+		for (var key in person) {
+			
+		}
+	}
+}
