@@ -297,10 +297,20 @@ bindCard = function(person,creditcard) {
 	this.creditcard = creditcard;
 	var personcreditcard = {};
 	for (var key in person) {
+		if (! creditcard.hasOwnProperty(key)) {
 			personcreditcard[key]= person[key];
 		}
-		for (var key in creditcard) {
+	};
+
+	for (var key in creditcard) {
+		if (! person.hasOwnProperty(key)) {
 			personcreditcard[key]= creditcard[key];
-		}		
+		};
+	};		
 	return personcreditcard;
 };
+
+var me = new MakePerson('Rafael','04/28/1988','144-56-6235');
+var myCard = new MakeCard('Chase','1234567894561231', 'Rafael','07/17','Credit',214);
+var binded = bindCard(me,myCard);
+console.log(binded);
