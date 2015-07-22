@@ -299,9 +299,9 @@ bindCard = function(person,creditcard) {
 	var personcreditcard = {
 		for (var key in person) {
 			personcreditcard[key]= person[key];
-		}
+		};
 		for (var key in creditcard) {
 			personcreditcard[key]= creditcard[key];
-		}
-	}
+		};
+	};
 };
