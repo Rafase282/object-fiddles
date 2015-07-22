@@ -299,7 +299,9 @@ bindCard = function(person,creditcard) {
 	for (var key in person) {
 		if (! creditcard.hasOwnProperty(key)) {
 			personcreditcard[key]= person[key];
-		}
+		} else if (creditcard[key] === person[key]) {
+			personcreditcard[key]= person[key];
+		}else {console.log('The names do not match')};
 	};
 
 	for (var key in creditcard) {
