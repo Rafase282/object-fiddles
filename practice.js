@@ -295,13 +295,12 @@ MakeCard = function (bank,cardNumber,name, expDate, type, code){
 bindCard = function(person,creditcard) {
 	this.person = person;
 	this.creditcard = creditcard;
-	
-	var personcreditcard = {
-		for (var key in person) {
+	var personcreditcard = {};
+	for (var key in person) {
 			personcreditcard[key]= person[key];
-		};
+		}
 		for (var key in creditcard) {
 			personcreditcard[key]= creditcard[key];
-		};
-	};
+		}		
+	return personcreditcard;
 };
